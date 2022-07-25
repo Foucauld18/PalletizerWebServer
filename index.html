@@ -1,16 +1,181 @@
 <!doctype html>
+<!-- AWP_In_Variable Name='"Tag_1"'-->
+<!-- AWP_In_Variable Name='"HMI_DB".nBottleTakingPos'-->
+
+<!-- AWP_In_Variable Name='"HMI_DB".nTargetNumberOfRow'-->
+<!-- AWP_In_Variable Name='"HMI_DB".nPalletHeight'-->
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
   <title>Palletizer Web Server</title>
+  <style>
   
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  </style>
+
+  <link rel="stylesheet" href="design.css">
+  <!-- <script src="script.js"></script>
+  <script src="jquery-2.0.2.min.js"></script> -->
 </head>
+
 <body>
   ...
   <!-- Le reste du contenu -->
-  <p>test ma gueule</p>
+
+  <br />
+  <p>
+  <form>
+    <input type="hidden" name='"HMI_DB".nBottleTakingPos:' value=1>
+    <input type="hidden" name='"Stop"' value=0>
+    <input type="submit" value="Start" class="mainButton">
+  </form>
+
+  <form>
+    <input type="hidden" name='"HMI_DB".nBottleTakingPos:' value=0>
+    <input type="hidden" name='"Stop"' value=1>
+    <input type="submit" value='"HMI_DB".nBottleTakingPos:' class="mainButton">
+  </form>
+
+  <form>
+    <input type="hidden" name='"Separator"' value=1>
+    <input type="submit" value="Separator" class="mainButton">
+  </form>
+
+  <form>
+    <input type="hidden" name='"Pallet taken"' value=1>
+    <input type="submit" value="Pallet Taken" class="mainButton">
+  </form>
+  </p>
+  <p >test couleur</p>
+  <br/>
+
+
+      :="HMI_DB".nBottleTakingPos:
+     <form method="post">   
+       <input name='"HMI_DB".nBottleTakingPos' type="number" />
+       <button type="submit">SaveTYPEnumber</button>
+     </form>
+     <br />
+
+     :="HMI_DB".nTargetNumberOfRow:
+     <form method="post">       
+       <input name='"HMI_DB".nTargetNumberOfRow' type="number" />
+       <button type="submit">Save</button>
+     </form>
+     <br />
+
+     <br />
+     
+     <!-- :="HMI_DB".nBottleTakingPos:
+     <form method="post">
+      <input name='"HMI_DB".nBottleTakingPos' type="text" />
+      <button type="submit">SaveTypeTEXT</button>
+    </form>
+    <br />
+
+    :="HMI_DB".nBottleTakingPos:
+    <form method="post">
+     <input name='"HMI_DB".nBottleTakingPos'  />
+     <button type="submit">NOType</button>
+   </form>
+   <br /> -->
+
+  
+  
+  
+  
+  
+     <form>
+    <fieldset class="ChampProductionSetting"> 
+      <legend class="nomDuChampProductionSetting"> Production Setting </legend>
+      <div class = "SettingLine">
+      <label for="1" >
+        Pallet Height   
+        <span class="InputDonneeSetting">
+
+        </span>                          
+        <input  id="1" type="number" name='"HMI_DB".nPalletHeight' >
+        <span class="donneeChampProductionSetting">
+
+        </span>
+        <a >:="HMI_DB".nPalletHeight:</a>
+        <span class="unite">
+
+        </span>
+        <a >Cm</a>
+      </label>
+    </div>
+      
+      <div class = "SettingLine">
+      <label for="2" >
+        Target Number Of Rows
+        <span class="InputDonneeSetting">
+          <input  class="InputDonneeSetting" id="2" name='"HMI_DB".nTargetNumberOfRow' type="number" max="8"  min="0"/>
+        </span>  
+        <span class="donneeChampProductionSetting">
+          "HMI_DB".nTargetNumberOfRow:
+        </span>
+        <span class="unite">
+          u
+        </span>
+      </label>
+    </div>
+    
+    <div class="InputDonneeSetting">
+      <input  class="InputDonneeSetting" id="2" name='"HMI_DB".nTargetNumberOfRow' type="number" max="8"  min="0"/>
+    </div>  
+    <div class="donneeChampProductionSetting">
+      "HMI_DB".nTargetNumberOfRow:
+    </div>
+    <div class="unite">
+      u
+    </div>
+
+    </fieldset>
+    <fieldset class="ChampProductionSetting"> 
+      <legend class="nomDuChampProductionSetting"> Press Setting </legend>
+      <div class = "SettingLine">
+      <label for="3" >
+        Bottle Taking Position
+        <input class="InputDonneeSetting"  name='"HMI_DB".nBottleTakingPos' type="number" />
+        <a class="donneeChampProductionSetting">:="HMI_DB".nBottleTakingPos:</a>
+        <a class="unite">Cm</a>
+      </label>
+    </div>
+    </fieldset>
+    <button class="SubmitSettingButton" type="submit">Save</button>
+  </form>
+  <br />
+
+  <form action="">
+    <table >
+      <caption>Production Settings</caption>
+      <tr>
+        <td class ="celluleName">Pallet Height</td>
+        <td class ="CelluleInput"> <input class ="SettingInputData" id="1" type="number" name='"HMI_DB".nPalletHeight' ></td>
+        <td class ="CelluleData">12331</td>
+        <td class ="CelluleUnite">Cm</td>
+      </tr>
+    </table>
+      <table >
+      <tr>
+        <td class ="celluleName">Target Number Of Rows</td>
+        <td class ="CelluleInput"> <input  class ="SettingInputData" class="InputDonneeSetting" id="2" name='"HMI_DB".nTargetNumberOfRow' type="number" max="8"  min="0"/></td>
+        <td class ="CelluleData">123331</td>
+        <td class ="CelluleUnite">u</td>
+      </tr>
+  
+
+    </table>
+  </form>
+  :="HMI_DB".nPalletHeight:
+  :="HMI_DB".nTargetNumberOfRow:
+
+ 
+    
+
+
   ...
 </body>
+
 </html>

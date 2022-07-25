@@ -1,0 +1,66 @@
+.mainButton{
+color:red;
+}
+.ChampProductionSetting{
+    color:red;
+
+    height: auto;
+    width: 50%;
+    min-width: 500px;
+    padding: 7px;
+    
+}
+.SettingLine{
+    border: 1px solid black;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.InputDonneeSetting{
+height: 15px;
+width: 50px;
+margin-left: 100px;
+}
+.donneeChampProductionSetting{
+    color: black;
+font-size: 15px;
+font-weight: 400;
+}.SubmitSettingButton{
+    color: green;
+}
+table{
+border-collapse: collapse;
+}
+td{
+    border-top: 1px solid black;
+    border-bottom:1px solid black;
+    
+}
+.celluleName{
+    border-left: 1px solid black;
+    width: 40%;
+    min-width:170px ;
+}
+.CelluleInput{
+    border-left: 1px solid black;
+    width: 10px; 
+    border-right:1px solid black ;  
+}
+.SettingInputData{
+   width: 60px;
+
+    
+}
+
+.CelluleData{
+    border-left: 1px solid black;
+  
+    width: 50px;
+    text-align:right;
+}
+
+.CelluleUnite{
+    border-right: 1px solid black;
+    width: 40px;
+    text-align: center;
+}
