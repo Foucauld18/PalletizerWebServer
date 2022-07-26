@@ -1,182 +1,114 @@
 <!doctype html>
-<!-- AWP_In_Variable Name='"Tag_1"'-->
-<!-- AWP_In_Variable Name='"HMI_DB".nBottleTakingPos'-->
-
-<!-- AWP_In_Variable Name='"HMI_DB".nTargetNumberOfRow'-->
-<!-- AWP_In_Variable Name='"HMI_DB".nPalletHeight'-->
-<html lang="fr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Palletizer Web Server</title>
-  <style>
-  
-  </style>
-
-  <link rel="stylesheet" href="design.css">
-  <!-- <script src="script.js"></script>
-  <script src="jquery-2.0.2.min.js"></script> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body>
-  ...
-  <!-- Le reste du contenu -->
+    <h1>Hello, world!</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 
-  <br />
-  <p>
-  <form>
-    <input type="hidden" name='"HMI_DB".nBottleTakingPos:' value=1>
-    <input type="hidden" name='"Stop"' value=0>
-    <input type="submit" value="Start" class="mainButton">
-  </form>
+    <div class="container">
+        <form action="
+        ">
+            <div class="row">
 
-  <form>
-    <input type="hidden" name='"HMI_DB".nBottleTakingPos:' value=0>
-    <input type="hidden" name='"Stop"' value=1>
-    <input type="submit" value='"HMI_DB".nBottleTakingPos:' class="mainButton">
-  </form>
+                <div class="col">
+                    Variable
+                    <div class="rowform">
+                        Pallet Height
+                    </div>
+                    <div class="rowform">
+                        Target Number of Rows
+                    </div>
+                </div>
+                <div class="col">
+                    Input data
+                    <div class="rowform">
+                        <input id="1" type="number" name='"HMI_DB".nPalletHeight'>
+                    </div>
+                    <div class="rowform">
+                        <input id="1" type="number" name='"HMI_DB".nTargetNumberOfRow'>
+                    </div>
 
-  <form>
-    <input type="hidden" name='"Separator"' value=1>
-    <input type="submit" value="Separator" class="mainButton">
-  </form>
+                </div>
 
-  <form>
-    <input type="hidden" name='"Pallet taken"' value=1>
-    <input type="submit" value="Pallet Taken" class="mainButton">
-  </form>
-  </p>
-  <p >test couleur</p>
-  <br/>
+                <div class="col">
+                    data
+                    <div class="rowform">
+                        :="HMI_DB".nPalletHeight:
+                    </div>
+                    <div class="rowform">
+                        "HMI_DB".nTargetNumberOfRow:
+                    </div>
+                </div>
+                <div class="col">
 
+                    unite
+                    <div class="rowform">
+                        Cm
+                    </div>
+                    <div class="rowform">
+                        U
+                    </div>
 
-      :="HMI_DB".nBottleTakingPos:
-     <form method="post">   
-       <input name='"HMI_DB".nBottleTakingPos' type="number" />
-       <button type="submit">SaveTYPEnumber</button>
-     </form>
-     <br />
+                </div>
+            </div>
+    </div>
 
-     :="HMI_DB".nTargetNumberOfRow:
-     <form method="post">       
-       <input name='"HMI_DB".nTargetNumberOfRow' type="number" />
-       <button type="submit">Save</button>
-     </form>
-     <br />
-
-     <br />
-     
-     <!-- :="HMI_DB".nBottleTakingPos:
-     <form method="post">
-      <input name='"HMI_DB".nBottleTakingPos' type="text" />
-      <button type="submit">SaveTypeTEXT</button>
     </form>
-    <br />
-
-    :="HMI_DB".nBottleTakingPos:
-    <form method="post">
-     <input name='"HMI_DB".nBottleTakingPos'  />
-     <button type="submit">NOType</button>
-   </form>
-   <br /> -->
-
-  
-  
-  
-  
-  
-     <form>
-    <fieldset class="ChampProductionSetting"> 
-      <legend class="nomDuChampProductionSetting"> Production Setting </legend>
-      <div class = "SettingLine">
-      <label for="1" >
-        Pallet Height   
-        <span class="InputDonneeSetting">
-
-        </span>                          
-        <input  id="1" type="number" name='"HMI_DB".nPalletHeight' >
-        <span class="donneeChampProductionSetting">
-
-        </span>
-        <a >:="HMI_DB".nPalletHeight:</a>
-        <span class="unite">
-
-        </span>
-        <a >Cm</a>
-      </label>
     </div>
+
+
+    <form action="">
+        <table >
+          <caption>Production Settings</caption>
+          <tr>
+            <td class ="celluleName">Pallet Height</td>
+            <td class ="CelluleInput"> <input class ="SettingInputData" id="1" type="number" name='"HMI_DB".nPalletHeight' ></td>
+            <td class ="CelluleData">:="HMI_DB".nPalletHeight:</td>
+            <td class ="CelluleUnite">Cm</td>
+          </tr>
+        <!-- </table>
+          <table > -->
+          <tr>
+            <td class ="celluleName">Target Number Of Rows</td>
+            <td class ="CelluleInput"> <input  class ="SettingInputData"  id="2" name='"HMI_DB".nTargetNumberOfRow' type="number" max="8"  min="0"/></td>
+            <td class ="CelluleData">:="HMI_DB".nTargetNumberOfRow:</td>
+            <td class ="CelluleUnite">u</td>
+          </tr>
       
-      <div class = "SettingLine">
-      <label for="2" >
-        Target Number Of Rows
-        <span class="InputDonneeSetting">
-          <input  class="InputDonneeSetting" id="2" name='"HMI_DB".nTargetNumberOfRow' type="number" max="8"  min="0"/>
-        </span>  
-        <span class="donneeChampProductionSetting">
-          "HMI_DB".nTargetNumberOfRow:
-        </span>
-        <span class="unite">
-          u
-        </span>
-      </label>
-    </div>
     
-    <div class="InputDonneeSetting">
-      <input  class="InputDonneeSetting" id="2" name='"HMI_DB".nTargetNumberOfRow' type="number" max="8"  min="0"/>
-    </div>  
-    <div class="donneeChampProductionSetting">
-      "HMI_DB".nTargetNumberOfRow:
-    </div>
-    <div class="unite">
-      u
-    </div>
-
-    </fieldset>
-    <fieldset class="ChampProductionSetting"> 
-      <legend class="nomDuChampProductionSetting"> Press Setting </legend>
-      <div class = "SettingLine">
-      <label for="3" >
-        Bottle Taking Position
-        <input class="InputDonneeSetting"  name='"HMI_DB".nBottleTakingPos' type="number" />
-        <a class="donneeChampProductionSetting">:="HMI_DB".nBottleTakingPos:</a>
-        <a class="unite">Cm</a>
-      </label>
-    </div>
-    </fieldset>
-    <button class="SubmitSettingButton" type="submit">Save</button>
-  </form>
-  <br />
-
-  <form action="">
-    <table >
-      <caption>Production Settings</caption>
-      <tr>
-        <td class ="celluleName">Pallet Height</td>
-        <td class ="CelluleInput"> <input class ="SettingInputData" id="1" type="number" name='"HMI_DB".nPalletHeight' ></td>
-        <td class ="CelluleData">:="HMI_DB".nPalletHeight:</td>
-        <td class ="CelluleUnite">Cm</td>
-      </tr>
-    <!-- </table>
-      <table > -->
-      <tr>
-        <td class ="celluleName">Target Number Of Rows</td>
-        <td class ="CelluleInput"> <input  class ="SettingInputData"  id="2" name='"HMI_DB".nTargetNumberOfRow' type="number" max="8"  min="0"/></td>
-        <td class ="CelluleData">:="HMI_DB".nTargetNumberOfRow:</td>
-        <td class ="CelluleUnite">u</td>
-      </tr>
-  
-
-    </table>
-    <button class="SubmitSettingButton" type="submit">Save</button>
-  </form>
-  :="HMI_DB".nPalletHeight:
-  :="HMI_DB".nTargetNumberOfRow:
-
- 
-    
-
-
-  ...
+        </table>
+        <button class="SubmitSettingButton" type="submit">Save</button>
+      </form>
 </body>
 
+
+
+<form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address = 
+
+            :="HMI_DB".nPalletHeight:
+             cm
+
+        </label>
+        <input type="number" class="form-control" id="exampleInputEmail1 " placeholder="10 cm">
+       
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 </html>
