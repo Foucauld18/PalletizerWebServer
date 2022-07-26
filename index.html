@@ -4,7 +4,7 @@
 <!-- AWP_In_Variable Name='"Button_SeparatorOk"'-->
 <!-- AWP_In_Variable Name='"HMI_simulation_DB".breset'-->
 <!-- AWP_In_Variable Name='"HMI_DB".bMode'-->
-<!-- AWP_In_Variable Name=''-->
+<!-- AWP_In_Variable Name='"Auto_DB".startAutoMode'-->
 
 
 '
@@ -205,14 +205,12 @@ Tag_1 =
   <br/>
 
   <form>
-    <input type="hidden" name='"Start"' value=0>
-    <input type="hidden" name='"Stop"' value=1>
+    <input type="hidden" name='"Auto_DB".startAutoMode' value=0>
     <input class ="btn btn-primary" type="submit" value= "Stop">
   </form>
 
   <form>
-    <input type="hidden" name='"Start"' value=1>
-    <input type="hidden" name='"Stop"' value=0>
+    <input type="hidden" name='"Auto_DB".startAutoMode' value=1>
     <input class ="btn btn-primary" type="submit" value= "Start" >
   </form>
 
