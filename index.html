@@ -146,9 +146,26 @@
 <br/>
 
 :="Tag_1":
-<button >TAG1 TRUE<input value=1  type="submit" name='"Tag_1"'></button>
-<button >TAG1 FALSE<input value=0 type="submit" name='"Tag_1"'></button>
+<button type="submit" value='Tag_1'>TAG1 TRUE<input value=1  type='hidden' name='"Tag_1"'></button>
+<button type="submit" value="Tag_1">TAG1 FALSE<input value=0  type='hidden' name='"Tag_1"'></button>
 
+<br/>
+<br/>
+
+
+<form class="mb-3">
+    <label for=""> true</label>
+    <input type="hidden" name='"Tag_1"' value=1>
+    <input type="submit" value="Tag_1">
+  </form>
+              
+  <form class="mb-3">
+    <label for=""> false</label>
+    <input type="hidden" name='"Tag_1"' value=0>
+    <input type="submit" value="Tag_1">
+  </form>
+  <br/>
+  <br/>
 
   <form>
     <input type="hidden" name='"HMI_DB".nBottleTakingPos:' value=0>
