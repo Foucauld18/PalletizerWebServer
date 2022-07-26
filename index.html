@@ -95,18 +95,22 @@
 
 <form>
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address = 
+        <label for="exampleInputEmail1" class="form-label">Pallet Heiht = 
 
             :="HMI_DB".nPalletHeight:
              cm
 
         </label>
-        <input type="number" class="form-control" id="exampleInputEmail1 " placeholder="10 cm">
+        <input type="number"  name='"HMI_DB".nPalletHeight' class="form-control" id="exampleInputEmail1 " placeholder="10 cm">
        
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <label for="exampleInputPassword1" class="form-label">
+            Target number of rows = 
+            :="HMI_DB".nTargetNumberOfRow:
+              rows
+        </label>
+        <input type="number"  name='"HMI_DB".nTargetNumberOfRow' class="form-control" id="exampleInputPassword1" placeholder="8 rows">
     </div>
     
     <button type="submit" class="btn btn-primary">Submit</button>
