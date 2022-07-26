@@ -5,14 +5,10 @@
 <!-- AWP_In_Variable Name='"HMI_simulation_DB".breset'-->
 <!-- AWP_In_Variable Name='"HMI_DB".bMode'-->
 <!-- AWP_In_Variable Name='"Auto_DB".startAutoMode'-->
-
-
-'
 <!-- AWP_In_Variable Name='"HMI_simulation_DB".Afficher Bottle'-->
 <!-- AWP_In_Variable Name='"Start"'-->
 <!-- AWP_In_Variable Name='"Stop"'-->
 <!-- AWP_In_Variable Name='"HMI_DB".nBottleTakingPos'-->
-
 <!-- AWP_In_Variable Name='"HMI_DB".nTargetNumberOfRow'-->
 <!-- AWP_In_Variable Name='"HMI_DB".nPalletHeight'-->
 <!-- AWP_In_Variable Name='"HMI_DB".nSeparatorThicknes'-->
@@ -171,37 +167,12 @@ type="text/javascript">
 <br/>
 <br/>
 
-Tag_1 = 
-:="Tag_1":
-<br/>
-<!-- <input type="submit" value="1" name='"Start"'><button>Start True</button> 
-<input type="submit"  value="0"  name='"Start"'><button>Start False</button>  -->
-
-
-<br/>
-<br/>
-
-
-<form class="mb-3" method="post">
-    <label for=""> true</label>
-    <input type="hidden" name='"Tag_1"' value=1>
-    <input type="submit" value="Tag_1">
-  </form>
-              
-  <!-- <form class="mb-3">
-    <label for=""> false</label>
-    <input type="hidden" name='"Tag_1"' value=0>
-    <input type="submit" value="Tag_1">
-  </form> -->
-  <br/>
-  <br/>
-
   Stop = 
-  :=Stop:
+  :"Auto_DB".startAutoMode:
   <br/>
 
   Start = 
-  :=Start:
+  :="Auto_DB".startAutoMode:
   <br/>
 
   <form>
