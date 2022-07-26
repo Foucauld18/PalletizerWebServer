@@ -218,17 +218,17 @@ Tag_1 =
     var valueAddBottleButton = document.getElementById('valueAddBottleButton');
     
 
-    if (valueAddBottle=='1'){
+    if (valueAddBottle.innerHTML =='1'){
         addBottleButton.setAttribute("value","Stop add bottle")
         valueAddBottleButton.setAttribute('value',0)
-    } else if (valueAddBottle=='0'){
+    } else if (valueAddBottle.innerHTML=='0'){
         addBottleButton.setAttribute("value","Add bottle")
         valueAddBottleButton.setAttribute('value',1)
     }else{
         addBottleButton.setAttribute("value","Test")
     }
     console.log("test")
-    console.log(valueAddBottle)
+    console.log(valueAddBottle.innerHTML)
 
 
  </script>
