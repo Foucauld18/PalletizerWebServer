@@ -203,8 +203,8 @@ Tag_1 =
   <label id="valueAddBottle" name="Start">:=Start:</label>
 
   <form>
-    <input type="hidden" name='"Start"' id="valueAddBottleButton" >
-    <input type="submit"  id="addBottleButton">
+    <input type="hidden" name='"Start"' id="valueAddBottleButton" value="" >
+    <input type="submit" value=""  id="addBottleButton">
   </form>
   <br/>
   ------------------------------------------
@@ -216,15 +216,19 @@ Tag_1 =
     var valueAddBottle = document.getElementById('valueAddBottle');
     var addBottleButton = document.getElementById("addBottleButton");
     var valueAddBottleButton = document.getElementById('valueAddBottleButton');
+    
 
-    if (valueAddBottle==1){
+    if (valueAddBottle=='1'){
         addBottleButton.setAttribute("value","Stop add bottle")
         valueAddBottleButton.setAttribute('value',0)
-    } else if (valueAddBottle==0){
+    } else if (valueAddBottle=='0'){
         addBottleButton.setAttribute("value","Add bottle")
         valueAddBottleButton.setAttribute('value',1)
+    }else{
+        addBottleButton.setAttribute("value","Test")
     }
-
+    console.log("test")
+    console.log(valueAddBottle)
 
 
  </script>
