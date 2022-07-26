@@ -6,9 +6,9 @@
 <!-- AWP_In_Variable Name='"HMI_DB".nPalletHeight'-->
 <!-- AWP_In_Variable Name='"HMI_DB".nSeparatorThicknes'-->
 <!-- AWP_In_Variable Name='"HMI_DB".nJarHeight'-->
-<!-- AWP_In_Variable Name='"MC"."M1".nSpeedAuto'-->
-<!-- AWP_In_Variable Name='"MC".M2.nSpeedAuto'-->
-<!-- AWP_In_Variable Name='"MC".SM1.nSpeedAuto'-->
+<!-- AWP_In_Variable Name='"MC_DB"."M1".nSpeedAuto'-->
+<!-- AWP_In_Variable Name='"MC_DB".M2.nSpeedAuto'-->
+<!-- AWP_In_Variable Name='"MC_DB".SM1.nSpeedAuto'-->
 <html lang="en">
 
 <head>
@@ -71,24 +71,24 @@
     <div class="mb-3">
         <label for="" class="form-label">
           Convoyer 1 speed =   
-          :="MC"."M1".nSpeedAuto:
+          :="MC_DB"."M1".nSpeedAuto:
         </label>
-        <input type="number"  name='"MC"."M1".nSpeedAuto' class="form-control" id="input-convoyer-1-Speed"  placeholder="100%">
+        <input type="number"  name='"MC_DB"."M1".nSpeedAuto' class="form-control" id="input-convoyer-1-Speed"  placeholder="100%">
     </div>
     <div class="mb-3">
         <label for="input-convoyer-2/3-Speed" class="form-label">
             Convoyer 2 & 3 speed = 
-            :="MC".M2.nSpeedAuto:
+            :="MC_DB".M2.nSpeedAuto:
         </label>
-        <input type="number"  name='"MC".M2.nSpeedAuto' class="form-control" id="input-convoyer-2/3-Speed"  placeholder="100%">
+        <input type="number"  name='"MC_DB".M2.nSpeedAuto' class="form-control" id="input-convoyer-2/3-Speed"  placeholder="100%">
     </div>
    
     <div class="mb-3">
         <label for="inputPressSpeed" class="form-label">
             Press Speed = 
-            :="MC".SM1.nSpeedAuto:
+            :="MC_DB".SM1.nSpeedAuto:
         </label>
-        <input type="number"  name='"MC".SM1.nSpeedAuto' class="form-control" id="inputPressSpeed"  placeholder="100%">
+        <input type="number"  name='"MC_DB".SM1.nSpeedAuto' class="form-control" id="inputPressSpeed"  placeholder="100%">
     </div>
     
     <button type="submit" class="btn btn-primary">Change parameters</button>
