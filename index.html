@@ -1,5 +1,8 @@
 <!doctype html>
 <!-- AWP_In_Variable Name='"Tag_1"'-->
+<!-- AWP_In_Variable Name="Button_PalletTaken"'-->
+<!-- AWP_In_Variable Name='"Button_SeparatorOk"'-->
+'
 <!-- AWP_In_Variable Name='"HMI_simulation_DB".Afficher Bottle'-->
 <!-- AWP_In_Variable Name='"Start"'-->
 <!-- AWP_In_Variable Name='"Stop"'-->
@@ -43,8 +46,16 @@ type="text/javascript">
 <br/>
 <br/>
 
+<script>
+    function submitProductionSettingForm(){
+        document.getElementsByName("ProductionSettingForm").submit();
+    }
+    function submitPressSettingForm(){
+        document.getElementsByName('PressSettingForm').submit();
+    }
+</script>
 
-<form>
+<form nom="ProductionSettingForm">
     <fieldset class="ChampProductionSetting"> 
         <legend class="nomDuChampProductionSetting"> Production Setting </legend>
     <div class="mb-3">
@@ -110,7 +121,7 @@ type="text/javascript">
   
 
 
-<form>
+<form name="PressSettingForm">
     <fieldset class="PressSetting"> 
         <legend class="PressSetting"> Production Setting </legend>
     <div class="mb-3"> 
@@ -149,6 +160,7 @@ type="text/javascript">
     </div>
 
     <button type="submit" class="btn btn-primary">Change press parameters</button>
+    <button onclick="submitPressSettingForm();" class="btn btn-primary">Change press parameters</button>
 </fieldset>
 </form>
 <br/>
@@ -190,35 +202,50 @@ Tag_1 =
   <form>
     <input type="hidden" name='"Start"' value=0>
     <input type="hidden" name='"Stop"' value=1>
-    <input type="submit" value= "Stop" class="mainButton">
+    <input class ="btn btn-primary" type="submit" value= "Stop">
   </form>
 
   <form>
     <input type="hidden" name='"Start"' value=1>
     <input type="hidden" name='"Stop"' value=0>
-    <input type="submit" value= "Start" class="mainButton">
+    <input class ="btn btn-primary" type="submit" value= "Start" >
+  </form>
+
+  <form>
+    <input type="hidden" name='"Button_SeparatorOk"' value=1>
+    <input class ="btn btn-primary" type="submit" value= "Separator OK" class="autoModeButton">
+  </form>
+
+  <form>
+    <input type="hidden" name='"Button_PalletTaken"' value=1>
+    <input class ="btn btn-primary" type="submit" value= "Pallet Taken" class="autoModeButton" >
   </form>
 
   <br/>
 
-  <label id="valueAddBottle" name="Start">:="HMI_simulation_DB".Afficher Bottle:</label>
-
-  <form>
-    <input type="hidden" name='"HMI_simulation_DB".Afficher Bottle' id="valueAddBottleButton" value="" >
-    <input type="submit" value=""  id="addBottleButton">
+  <label id="StartValue" style="display:none"   name="Start">:="Start":</label>
+  <label id="valueAddBottle" style="display:none"   name="AddBottle">:="HMI_simulation_DB".Afficher Bottle:</label>
+  <form >
+    <input  type="hidden" name='"HMI_simulation_DB".Afficher Bottle' id="valueAddBottleButton" value="" >
+    <input class ="btn btn-primary" type="submit" value=""  id="addBottleButton" >
   </form>
   <br/>
   ------------------------------------------
   <br/>
 
-
+<!-- <script>
+    var startValue = document.getElementById('StartValue').innerHTML;
+    var autoModeButtons = document.getElementsByClassName("autoModeButton");
+    if (startValue !=1){
+       autoModeButtons.forEach(Element.setAttribute(disabled));
+    }
+</script> -->
 
  <script>
     var valueAddBottle = document.getElementById('valueAddBottle');
     var addBottleButton = document.getElementById("addBottleButton");
     var valueAddBottleButton = document.getElementById('valueAddBottleButton');
     
-
     if (valueAddBottle.innerHTML =='1'){
         addBottleButton.setAttribute("value","Stop add bottle")
         valueAddBottleButton.setAttribute('value',0)
@@ -226,12 +253,9 @@ Tag_1 =
         addBottleButton.setAttribute("value","Add bottle")
         valueAddBottleButton.setAttribute('value',1)
     }else{
-        addBottleButton.setAttribute("value","Test")
+        addBottleButton.setAttribute("value","Not connected")
     }
-    console.log("test")
-    console.log(valueAddBottle.innerHTML)
-
-
+    
  </script>
 
 
