@@ -1,5 +1,7 @@
 <!doctype html>
 <!-- AWP_In_Variable Name='"Tag_1"'-->
+<!-- AWP_In_Variable Name='"Start"'-->
+<!-- AWP_In_Variable Name='"Stop"'-->
 <!-- AWP_In_Variable Name='"HMI_DB".nBottleTakingPos'-->
 
 <!-- AWP_In_Variable Name='"HMI_DB".nTargetNumberOfRow'-->
@@ -154,7 +156,7 @@
 <br/>
 
 
-<form class="mb-3">
+<form class="mb-3" method="post">
     <label for=""> true</label>
     <input type="hidden" name='"Tag_1"' value=1>
     <input type="submit" value="Tag_1">
@@ -168,10 +170,18 @@
   <br/>
   <br/>
 
+  Stop = 
+  :=Stop:
+  <br/>
+
+  Start = 
+  :=Start:
+  <br/>
+
   <form>
-    <input type="hidden" name='"HMI_DB".nBottleTakingPos:' value=0>
+    <input type="hidden" name='"Start"' value=0>
     <input type="hidden" name='"Stop"' value=1>
-    <input type="submit" value='"HMI_DB".nBottleTakingPos:' class="mainButton">
+    <input type="submit" value= "Stop" class="mainButton">
   </form>
 
 
