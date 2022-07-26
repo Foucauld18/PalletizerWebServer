@@ -199,33 +199,35 @@ Tag_1 =
   </form>
 
   <br/>
+
+  <label id="valueAddBottle" name="Start">:=Start:</label>
+
+  <form>
+    <input type="hidden" name='"Start"' id="valueAddBottleButton" value=1>
+    <input type="submit" value="test" id="addBottleButton">
+  </form>
+  <br/>
   ------------------------------------------
   <br/>
 
 
-<input id='setvar'  />
-<button>Stop JS</button>
-<script type="text/javascript">
-    $(document).ready(function(){
-        //query the trianglewave variable every second
-        $.ajaxSetup({ cache: false });
-        setInterval(function() {
-            $.get("index.html", function(result){
-                $('#Stop').text(result);
-                });
-        },1000);
 
-        
-        //modify the triangleWave value
-                $("button").click(function(){
-                    url="index.html";
-                    name='"Stop"';
-                    val=$('input[id=setvar]').val();
-                    sdata=escape(name)+'='+val;
-                    $.post(url,sdata,function(result){});
-                });
-    });
-    </script>
+ <script>
+    var valueAddBottle = document.getElementById('valueAddBottle');
+    var addBottleButton = document.getElementById("addBottleButton");
+    var valueAddBottleButton = document.getElementById('valueAddBottleButton');
+
+    if (valueAddBottle==1){
+        addBottleButton.setAttribute("value","Stop add bottle")
+        valueAddBottleButton.setAttribute('value',0)
+    } else if (valueAddBottle==0){
+        addBottleButton.setAttribute("value","Add bottle")
+        valueAddBottleButton.setAttribute('value',1)
+    }
+
+
+
+ </script>
 
 
 
