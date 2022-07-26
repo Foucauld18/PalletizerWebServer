@@ -26,6 +26,7 @@
 </head>
 
 <body>
+    <script src="jquery-2.0.2.min.js"></script>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
@@ -149,8 +150,9 @@
 
 :="Tag_1":
 <br/>
-<button type="submit" >Start TRUE<input value=1  type='hidden' name='"Start"'></button>
-<button type="submit" >Start FALSE<input value=0  type='hidden' name='"Start"'></button>
+<input type="submit" value="1" name='"Start"'><button>Start True</button> />
+<input type="submit"  value="2"  name='"Start"'><button>Start False</button> />
+
 
 <br/>
 <br/>
@@ -190,16 +192,20 @@
     <input type="submit" value= "Start" class="mainButton">
   </form>
 
+  <br/>
+  ------------------------------------------
+  <br/>
 
-<!-- <input id='setvar' type="text" />
-<button>Modify</button>
+
+<input id='setvar'  />
+<button>Stop JS</button>
 <script type="text/javascript">
     $(document).ready(function(){
         //query the trianglewave variable every second
         $.ajaxSetup({ cache: false });
         setInterval(function() {
             $.get("index.html", function(result){
-                $('#Tag_1').text(result);
+                $('#Stop').text(result);
                 });
         },1000);
 
@@ -207,16 +213,20 @@
         //modify the triangleWave value
                 $("button").click(function(){
                     url="index.html";
-                    name='Tag_1';
+                    name='"Stop"';
                     val=$('input[id=setvar]').val();
                     sdata=escape(name)+'='+val;
                     $.post(url,sdata,function(result){});
                 });
     });
-    </script> -->
+    </script>
 
 
 
+
+<br/>
+------------------------------------------
+<br/>
 <br/>
 <br/>
 </body>
