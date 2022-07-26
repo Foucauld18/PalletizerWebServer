@@ -12,7 +12,7 @@
 <!-- AWP_In_Variable Name='"HMI_DB".nWaitingPosition'-->
 <!-- AWP_In_Variable Name='"HMI_DB".nBottleTakingPos'-->
 <!-- AWP_In_Variable Name='"HMI_DB".nWaitingPCSOffset'-->
-<!-- AWP_In_Variable Name='"HMI_DB".nPressingPOSOffset'-->
+<!-- AWP_In_Variable Name='"HMI_DB".nPressingPosOffset'-->
 <html lang="en">
 
 <head>
@@ -97,7 +97,7 @@
         <input type="number"  name='"MC_DB".SM1.nSpeedAuto' class="form-control" id="inputPressSpeed"  placeholder="100%">
     </div>
     
-    <button type="submit" class="btn btn-primary">Change parameters</button>
+    <button type="submit" class="btn btn-primary">Change production parameters</button>
   
 
 
@@ -133,13 +133,13 @@
     <div class="mb-3"> 
         <label for="inpuntPressingPosOffset" class="form-label">
             Pressing Position offset =
-            :="HMI_DB".nPressingPOSOffset:
+            :="HMI_DB".nPressingPosOffset:
 
         </label>
-        <input type="number"  name='"HMI_DB".nPressingPOSOffset' class="form-control" id="inpuntPressingPosOffset" placeholder="">
+        <input type="number"  name='"HMI_DB".nPressingPosOffset' class="form-control" id="inpuntPressingPosOffset" placeholder="">
     </div>
 
-
+    <button type="submit" class="btn btn-primary">Change press parameters</button>
 </fieldset>
 </form>
 </body>
