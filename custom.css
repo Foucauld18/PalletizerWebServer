@@ -1,0 +1,18 @@
+
+.btn-primary{
+    background-color: #213A83;
+    border-color:#213A83;
+    width: 80%;
+    margin: 3px;
+}
+
+.col2 Generalcolumn2 {
+    text-align: right;
+}
+Generalcolumn3 {
+    text-align: left;
+}
+
+Generalcolumn4{
+    text-align: center;
+}
