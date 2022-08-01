@@ -157,17 +157,6 @@
     <!-- Formulaire Procudtion Settings -->
     <div class="row">
 
-
-
-
-
-
-
-
-        
-               
-        :="Auto_DB".startAutoMode:
-
         <div class="col-6">
             <form nom="ProductionSettingForm">
                 <fieldset class="ChampProductionSetting">
@@ -355,9 +344,9 @@
     <script>
         var startAutoModeCommande = document.getElementById('startAutoModeCommande');
         var AffichageCommande = document.getElementById('AffichageCommande');
-        if (startAutoModeCommande.innerHTML == 1) {
+        if (startAutoModeCommande.innerHTML == '1') {
             AffichageCommande.innerHTML = 'Start'
-        } else if (startAutoModeCommande.innerHTML == 0) {
+        } else if (startAutoModeCommande.innerHTML == '0') {
             AffichageCommande.innerHTML = 'Stop'
         } else {
             AffichageCommande.innerHTML = 'ERROR'
@@ -369,7 +358,7 @@
     <script>
         var redLight = document.getElementById("redLight");
         var AffichageState = document.getElementById('AffichageState');
-        if (redLight == 1){
+        if (redLight == '0'){
             AffichageState.innerHTML="Working"
         } else{
             AffichageState.innerHTML="Stopped"
