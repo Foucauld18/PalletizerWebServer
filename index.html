@@ -192,8 +192,45 @@
     <!-- Formulaire Procudtion Settings -->
     <div class="row">
 
-        <div class="col-6">
 
+
+
+
+
+
+
+        
+                
+        
+
+        <div class="col-6">
+            <form nom="ProductionSettingForm">
+                <fieldset class="ChampProductionSetting">
+                    <legend class="nomDuChampProductionSetting"> Production Setting </legend>
+                    
+
+            <div class="mb-3">
+
+                <label for="inputPalletHeight" class="form-label">Pallet Heiht =
+
+                    :="HMI_DB".nPalletHeight:
+                    cm
+
+                </label>
+                <input type="number" name='"HMI_DB".nPalletHeight' class="form-control" id="inputPalletHeight"
+                    placeholder="10 cm">
+
+            </div>
+            
+            <div class="mb-3">
+                <label for="inputTargetNumberOfRows" class="form-label">
+                    Target number of rows =
+                    :="HMI_DB".nTargetNumberOfRow:
+                    rows
+                </label>
+                <input type="number" name='"HMI_DB".nTargetNumberOfRow' class="form-control"
+                    id="inputTargetNumberOfRows" placeholder="8 rows">
+            </div>
             <div class="mb-3">
                 <label for="input-Separator-Thicknes" class="form-label">
                     Separator Thicknes =
@@ -240,36 +277,13 @@
 
             <button onclick="submitProductionSettingForm();" class="btn btn-primary">Change production
                 parameters</button>
+                </fieldset>
             </form>
 
         </div>
         <!-- Formulaire press Setting -->
         <div class="col-6">
-            <form nom="ProductionSettingForm">
-                <fieldset class="ChampProductionSetting">
-                    <legend class="nomDuChampProductionSetting"> Production Setting </legend>
-                    <div class="mb-3">
-
-                        <label for="inputPalletHeight" class="form-label">Pallet Heiht =
-
-                            :="HMI_DB".nPalletHeight:
-                            cm
-
-                        </label>
-                        <input type="number" name='"HMI_DB".nPalletHeight' class="form-control" id="inputPalletHeight"
-                            placeholder="10 cm">
-
-                    </div>
-                    <div class="mb-3">
-                        <label for="inputTargetNumberOfRows" class="form-label">
-                            Target number of rows =
-                            :="HMI_DB".nTargetNumberOfRow:
-                            rows
-                        </label>
-                        <input type="number" name='"HMI_DB".nTargetNumberOfRow' class="form-control"
-                            id="inputTargetNumberOfRows" placeholder="8 rows">
-                    </div>
-
+            
                     <form name="PressSettingForm">
                         <fieldset class="PressSetting">
                             <legend class="PressSetting"> Press Setting </legend>
