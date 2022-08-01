@@ -365,6 +365,16 @@
         console.log(AffichageCommande);
     </script>
 
+<script>
+    var redLight = document.getElementById("redLight");
+    var AffichageState = document.getElementById('AffichageState');
+    if (redLight == '0'){
+        AffichageState.innerHTML="Working"
+    } else{
+        AffichageState.innerHTML="Stopped"
+    }
+</script>
+
 
 
    <!-- ----------------------variable Treatment---------------------- -->
