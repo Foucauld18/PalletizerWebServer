@@ -70,18 +70,14 @@
    <div class="conteneur">
 
     <div class="row">
-        <div class="col-2">
+        <div class="col-3">
             Information
         </div> 
-        <div class="col-2">
+        <div class="col-3">
             General 
         </div> 
-        <div class="col-2">
+        <div class="col-3">
             Simulation
-        </div> 
-
-        <div class="col-2">
-            Motors Speeds
         </div> 
     </div> 
 
@@ -89,7 +85,7 @@
 
         <div class="row">
             
-            <div class="col-2" name="Generalcolumn1">
+            <div class="col-3" name="Generalcolumn1">
                 <table class="table">
                     
                     <tr>
@@ -123,7 +119,7 @@
 
             </script>
 
-            <div class="col-1" name="Generalcolumn2">
+            <div class="col-3" name="Generalcolumn2">
                 <form>
                     <label id="StartValue" style="display:none" name="Start">:="Start":</label>
                     <input type="hidden" name='"Auto_DB".startAutoMode' value=1>
@@ -137,7 +133,7 @@
                     </form>
     
             </div>
-            <div class="col-1" name="Generalcolumn3">
+            <div class="col-3" name="Generalcolumn3">
 
             <form>
                 <input type="hidden" name='"Auto_DB".startAutoMode' value=0>
@@ -153,12 +149,12 @@
 
         </div>
         
-            <div class="col-1"name="Generalcolumn4">
+            <div class="col-3"name="Generalcolumn4">
                 
                     
                     <form>
                         <label id="valueAddBottle" style="display:none" name="AddBottle">:="HMI_simulation_DB".addBottle:</label>
-                        <input type="hidden" name='"HMI_simulation_DB".Afficher Bottle' id="valueAddBottleButton"
+                        <input type="hidden" name='"HMI_simulation_DB".addBottle' id="valueAddBottleButton"
                             value="">
                         <input class="btn btn-primary" type="submit" value="" id="addBottleButton">
                     </form>
@@ -174,8 +170,13 @@
                 
             </div>
 
-            <div class="col-2" name="Generalcolumn1">
+            <div class="col-3" name="Generalcolumn5">
                 <table class="table">
+
+                    <tr>
+                        <td>Motor</td>
+                        <td>Speed</td> 
+                    </tr>
                     
                     <tr>
                         <td>M1</td>
