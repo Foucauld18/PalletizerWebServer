@@ -85,16 +85,20 @@
                     
                     <tr>
                         <td>Mode</td>
-                        <label id="startAutoModeCommande" style="display:none">:="Auto_DB".startAutoMode:</label>
+                        <label id="mode" name="Mode" style="display:none">:="HMI_DB".bMode:</label>
+                       
 
                         <td id="AffichageMode"> </td>
                     </tr>
                     <tr>
                         <td >Commande</td>
+                        
+                        <label id="startAutoModeCommande" style="display:none">:="Auto_DB".startAutoMode:</label>
                         <td id="AffichageCommande"> </td>
                     </tr>
                     <tr>
                         <td > Machine State</td>
+                        
                         <td id="AffichageState"> </td>
                     </tr>
                 </table>
@@ -107,6 +111,7 @@
 
             <div class="col-1" name="Generalcolumn2">
                 <form>
+                    <label id="StartValue" style="display:none" name="Start">:="Start":</label>
                     <input type="hidden" name='"Auto_DB".startAutoMode' value=1>
                     <input class="btn btn-primary" type="submit" value="Start">
                 </form>
@@ -138,6 +143,7 @@
                 
                     
                     <form>
+                        <label id="valueAddBottle" style="display:none" name="AddBottle">:="HMI_simulation_DB".AfficherBottle:</label>
                         <input type="hidden" name='"HMI_simulation_DB".Afficher Bottle' id="valueAddBottleButton"
                             value="">
                         <input class="btn btn-primary" type="submit" value="" id="addBottleButton">
@@ -297,11 +303,11 @@
 
 
     <!-- ----------------------Get value of variables---------------------- -->
-    <label id="redLight" style="display:none">:=""Q_Light_Red":</label>
+    <label id="redLight" style="display:none">:="Q_Light_Red":</label>
   
-    <label id="mode" name="Mode" style="display:none">:="HMI_DB".bMode:</label>
-    <label id="StartValue" style="display:none" name="Start">:="Start":</label>
-    <label id="valueAddBottle" style="display:none" name="AddBottle">:="HMI_simulation_DB".AfficherBottle:</label>
+    
+    
+    
    <!-- ----------------------Get value of variables END---------------------- -->
 
                       <!-- ________________________________ -->
