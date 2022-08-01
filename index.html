@@ -297,9 +297,40 @@
 
 
     <!-- ----------------------Get value of variables---------------------- -->
-    <label id="redLight" style="display:none">:=""Q_Light_Red":</label>
+    <label id="redLight" style="display:none">:=""Q_Light_Red":
+        <script>
+            var redLight = document.getElementById("redLight");
+            var AffichageState = document.getElementById('AffichageState');
+            if (redLight == '0'){
+                AffichageState.innerHTML="Working"
+            } else{
+                AffichageState.innerHTML="Stopped"
+            }
+        </script>
+        </label>
     <label id="startAutoModeCommande" style="display:none">:="Auto_DB".startAutoMode:</label>
-    <label id="mode" name="Mode" style="display:none">:="HMI_DB".bMode:</label>
+    <label id="mode" name="Mode" style="display:none">:="HMI_DB".bMode:
+        <script>
+            var mode = document.getElementById('mode');
+            var modeButton = document.getElementById("modeButton");
+            var valueModebutton = document.getElementById('valueModebutton');
+            var AffichageMode = document.getElementById('AffichageMode');
+    
+            if (mode.innerHTML == '1') {
+                modeButton.setAttribute("value", "Manuel Mode")
+                valueModebutton.setAttribute('value', 0)
+                AffichageMode.innerHTML = "Automatique"
+            } else if (mode.innerHTML == '0') {
+                modeButton.setAttribute("value", "Auto Mode")
+                valueModebutton.setAttribute('value', 1)
+                AffichageMode.innerHTML = "Manuel"
+            } else {
+                valueModebutton.setAttribute("value", "ERROR")
+                AffichageMode.innerHTML = "Error"
+            }
+    
+        </script>
+    </label>
     <label id="StartValue" style="display:none" name="Start">:="Start":</label>
     <label id="valueAddBottle" style="display:none" name="AddBottle">:="HMI_simulation_DB".AfficherBottle:</label>
    <!-- ----------------------Get value of variables END---------------------- -->
@@ -324,26 +355,7 @@
 
     </script>
 
-    <script>
-        var mode = document.getElementById('mode');
-        var modeButton = document.getElementById("modeButton");
-        var valueModebutton = document.getElementById('valueModebutton');
-        var AffichageMode = document.getElementById('AffichageMode');
 
-        if (mode.innerHTML == '1') {
-            modeButton.setAttribute("value", "Manuel Mode")
-            valueModebutton.setAttribute('value', 0)
-            AffichageMode.innerHTML = "Automatique"
-        } else if (mode.innerHTML == '0') {
-            modeButton.setAttribute("value", "Auto Mode")
-            valueModebutton.setAttribute('value', 1)
-            AffichageMode.innerHTML = "Manuel"
-        } else {
-            valueModebutton.setAttribute("value", "ERROR")
-            AffichageMode.innerHTML = "Error"
-        }
-
-    </script>
 
     <script>
         var startAutoModeCommande = document.getElementById('startAutoModeCommande');
@@ -359,15 +371,7 @@
         console.log(AffichageCommande);
     </script>
 
-    <script>
-        var redLight = document.getElementById("redLight");
-        var AffichageState = document.getElementById('AffichageState');
-        if (redLight == '0'){
-            AffichageState.innerHTML="Working"
-        } else{
-            AffichageState.innerHTML="Stopped"
-        }
-    </script>
+
 
    <!-- ----------------------variable Treatment---------------------- -->
 </div>
