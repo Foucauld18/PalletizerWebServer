@@ -6,6 +6,10 @@
 <!-- AWP_In_Variable Name='"HMI_simulation_DB".breset'-->
 <!-- AWP_In_Variable Name='"HMI_DB".bMode'-->
 <!-- AWP_In_Variable Name='"Auto_DB".startAutoMode'-->
+<!-- AWP_In_Variable Name='"Auto_DB".RowPallet'-->
+<!-- AWP_In_Variable Name='"MC.DB".M1.nspeed'-->
+<!-- AWP_In_Variable Name='"MC.DB".M2.nspeed'-->
+<!-- AWP_In_Variable Name='"MC.DB".M3.nspeed'-->
 <!-- AWP_In_Variable Name='"HMI_simulation_DB".Afficher Bottle'-->
 <!-- AWP_In_Variable Name='"Start"'-->
 <!-- AWP_In_Variable Name='"Stop"'-->
@@ -21,6 +25,7 @@
 <!-- AWP_In_Variable Name='"HMI_DB".nBottleTakingPos'-->
 <!-- AWP_In_Variable Name='"HMI_DB".nWaitingPCSOffset'-->
 <!-- AWP_In_Variable Name='"HMI_DB".nPressingPosOffset'-->
+
 <html lang="fr">
 
 <head>
@@ -74,6 +79,10 @@
         <div class="col-2">
             Simulation
         </div> 
+
+        <div class="col-2">
+            Motors Speeds
+        </div> 
     </div> 
 
         
@@ -100,6 +109,11 @@
                         <td > Machine State</td>
                         
                         <td id="AffichageState"> </td>
+                    </tr>
+                    <tr>
+                        <td > Actual Row</td>
+                        
+                        <td>:="Auto_DB".RowPallet:</td>
                     </tr>
                 </table>
                
@@ -158,6 +172,25 @@
                         <input class="btn btn-primary" type="submit" value="Pallet Taken" class="autoModeButton">
                     </form>
                 
+            </div>
+
+            <div class="col-2" name="Generalcolumn1">
+                <table class="table">
+                    
+                    <tr>
+                        <td>M1</td>
+                        <td id="AffichageMode">:="MC.DB".M1.nspeed: </td>
+                    </tr>
+                    <tr>
+                        <td >M2</td>
+                        <td id="AffichageCommande">:="MC.DB".M2.nspeed: </td>
+                    </tr>
+                    <tr>
+                        <td >M3</td>
+                        <td id="AffichageState">:="MC.DB".M3.nspeed:  </td>
+                    </tr>
+                </table>
+               
             </div>
 
         </div>
